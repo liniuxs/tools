@@ -21,7 +21,7 @@ else
         echo "<h1>Mail test from $server</h1>
         <form method='post' action='" . $_SERVER['PHP_SELF'] . "'>
         Enter Your Email: <input name='email' type='text' /><br /><br />
-        <input type='submit' name='Submit' value='Submit' />
+        <input type='submit' name='Submit' value='Send' />
         </form>";
 }
 ?>
