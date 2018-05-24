@@ -5,7 +5,7 @@ if (isset($_REQUEST['email']))
 //if "email" is filled out, send email
 {
   $to      = $_REQUEST['email'];
-  $subject = "Mail test" ;
+  $subject = "Hostinger mail testing" ;
   $message = "If you got this message, mail sending from $server is working fine :)" ;
   $headers = 'From: webmaster@example.com' . "\r\n" .
       'Reply-To: webmaster@example.com' . "\r\n" .
