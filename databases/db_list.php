@@ -1,13 +1,12 @@
-# Fill our vars and run on cli
-# $ php -f db-connect-test.php
+# DB test
 
 $dbname = 'name';
 $dbuser = 'user';
 $dbpass = 'pass';
-$dbhost = 'host';
+$dbhost = 'localhost';
 
-$connect = mysqli_connect($dbhost, $dbuser, $dbpass) or die("Unable to Connect to '$dbhost'");
-mysqli_select_db($connect, $dbname) or die("Could not open the db '$dbname'");
+$connect = mysqli_connect($dbhost, $dbuser, $dbpass) or die("Neprisijungia prie db hosto '$dbhost'");
+mysqli_select_db($connect, $dbname) or die("Negali atidaryti '$dbname'");
 
 $test_query = "SHOW TABLES FROM $dbname";
 $result = mysqli_query($connect, $test_query);
@@ -19,7 +18,7 @@ while($tbl = mysqli_fetch_array($result)) {
 }
 
 if (!$tblCnt) {
-  echo "There are no tables<br />\n";
+  echo "Duombazeje nera lenteliu<br />\n";
 } else {
-  echo "There are $tblCnt tables<br />\n";
+  echo "Duombazes lenteles $tblCnt tables<br />\n";
 }
